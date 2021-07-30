@@ -1,0 +1,1 @@
+insert into user (user_id,password,user_name) values ('root','$2a$10$jpmQhp3PHBjMkGkq6OBPOeVJDSi44WzYFnWTdkDMoQ20XTaMd9zr2','admin');

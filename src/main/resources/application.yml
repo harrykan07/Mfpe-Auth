@@ -1,0 +1,40 @@
+spring:
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.h2.Driver
+#    url: jdbc:mysql://localhost:3306/authentication
+    url: jdbc:h2:~/authentication;
+    username:  
+    password:
+    initialization-mode: always
+  h2:
+    enabled: true
+  jpa:  
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  application:
+    name: auth-service
+ 
+server:
+  port: 8083
+  
+  
+
+
+# Hibernate logs for displaying executed SQL, input and output 
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: trace
+      type:
+        descriptor:
+          sql: trace
+
+# Log pattern 
+  pattern:
+    console: "%d{dd-MM-yy} %d{HH:mm:ss.SSS} %-20.20thread %5p %-25.25logger{25} %25M %4L %m%n"
