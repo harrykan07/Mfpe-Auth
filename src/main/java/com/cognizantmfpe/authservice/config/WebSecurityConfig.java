@@ -90,7 +90,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		log.info("START");
-		IgnoredRequestConfigurer antMatchers = web.ignoring().antMatchers("/login", "/h2-console/**",
+		IgnoredRequestConfigurer antMatchers = web.ignoring().antMatchers("/auth/login", "/h2-console/**",
 				"/configuration/ui", "/configuration/security", "/webjars/**", "/manage/health/**");
 		log.debug("ANT MATCHERS{}:", antMatchers);
 		log.info("END");
