@@ -27,7 +27,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/  
+      defaultZone: http://65.1.180.5:8761/eureka/  
 
 
 # Hibernate logs for displaying executed SQL, input and output 
